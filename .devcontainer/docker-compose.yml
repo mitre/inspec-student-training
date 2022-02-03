@@ -15,6 +15,9 @@ services:
     image: nginx:latest
     container_name: webserver
     restart: always
+    
+  heimdall-lite:
+    image: mitre/heimdall-lite:latest
+    container_name: heimdall-lite
     ports:
-      - "80:80"
-      - "443:443"
+      - "3000:3000"
