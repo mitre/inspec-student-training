@@ -32,7 +32,7 @@
 	
 	"portsAttributes": {"3306": {"label": "MySQL DB"},
 			    "8080": {"label": "Heimdall Lite"}
-			   }
+			   },
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	"runServices": [
