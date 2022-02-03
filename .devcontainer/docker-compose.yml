@@ -2,18 +2,19 @@ version: '3'
 services:
   operatingsystem:
     image: redhat/ubi8:latest
+    container_name: redhat8
 
   database:
     image: mysql:5.7
+    container_name: mysqldb
     restart: always
+    ports:
+      - "3306:3306"
 
   nginx:
     image: nginx:latest
+    container_name: webserver
     restart: always
-
-  web:
-    build: .
-    depends_on:
-      - nginx
-      - database
-      - operatingsystem
+    ports:
+      - "80:80"
+      - "443:443"
