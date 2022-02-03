@@ -18,23 +18,6 @@
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspace",
 
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"mtxr.sqltools",
-		"mtxr.sqltools-driver-pg"
-	],
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		5000
-	],
-
-	"portsAttributes": {
-		"5000": {
-		  "label": "webhook receiver"
-		}
-	},
-
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	"runServices": [
 		"database",
