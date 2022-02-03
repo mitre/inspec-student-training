@@ -18,22 +18,6 @@
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspace",
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"sqltools.connections": [
-			{
-			"name": "Container database",
-			"driver": "PostgreSQL",
-			"previewLimit": 50,
-			"server": "database",
-			"port": 5432,
-			"database": "webhooks",
-			"username": "postgres",
-			"password": "mysecretpassword"
-			}
-		]
-	},
-
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"mtxr.sqltools",
@@ -42,24 +26,20 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		5000,
-		5432
+		5000
 	],
 
 	"portsAttributes": {
 		"5000": {
 		  "label": "webhook receiver"
-		},
-		"5432": {
-		  "label": "postgres"
 		}
 	},
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	"runServices": [
 		"database",
-		"redis_cache",
-		"flyway"
+		"nginx",
+		"operatingsystem"
 	],
 
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
