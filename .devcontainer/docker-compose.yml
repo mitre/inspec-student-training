@@ -17,7 +17,7 @@ services:
     restart: always
     
   heimdall-lite:
-    image: mitre/heimdall-lite:latest
+    image: mitre/heimdall-lite:release-latest
     container_name: heimdall-lite
     ports:
-      - "3000:3000"
+      - "8080:80"
