@@ -1,5 +1,10 @@
 version: '3'
 services:
+  runner:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+  
   operatingsystem:
     image: redhat/ubi8:latest
     container_name: redhat8
